@@ -3,26 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Colección Anime</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Anime Random</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="main-container">
-    <div class="random-box">
-      <h1>🎴 Descubre un Personaje</h1>
+  <header>
+    <h1>🎴 Personaje Aleatorio</h1>
+    <div class="header-buttons">
+      <button onclick="toggleTheme()">🌓</button>
+      <a href="collection.html">📚 Ver Colección</a>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <div class="card-box">
       <img id="character-image" src="" alt="Imagen del personaje" />
       <h2 id="character-name">Haz clic para descubrir</h2>
       <h3 id="anime-source"></h3>
       <button onclick="getRandomCharacter()">✨ Obtener Personaje</button>
       <button onclick="toggleFavorite()" id="favorite-btn">🤍 Marcar como Favorito</button>
     </div>
+  </main>
 
-    <div class="collection-box">
-      <h2>📚 Tu Colección</h2>
-      <button onclick="clearCollection()">🗑️ Borrar Colección</button>
-      <div id="collection-grid" class="grid"></div>
-    </div>
-  </div>
   <script src="script.js"></script>
 </body>
 </html>

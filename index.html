@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colección Anime</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="random-box">
+      <h1>🎴 Descubre un Personaje</h1>
+      <img id="character-image" src="" alt="Imagen del personaje" />
+      <h2 id="character-name">Haz clic para descubrir</h2>
+      <h3 id="anime-source"></h3>
+      <button onclick="getRandomCharacter()">✨ Obtener Personaje</button>
+      <button onclick="toggleFavorite()" id="favorite-btn">🤍 Marcar como Favorito</button>
+    </div>
+
+    <div class="collection-box">
+      <h2>📚 Tu Colección</h2>
+      <button onclick="clearCollection()">🗑️ Borrar Colección</button>
+      <div id="collection-grid" class="grid"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -12,6 +12,10 @@ body.dark {
   --highlight: #f06292;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -27,11 +31,19 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
 }
 
 .header-buttons {
   display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
 }
 
 a {
@@ -41,7 +53,7 @@ a {
 }
 
 .main-container {
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,7 +66,7 @@ a {
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
   text-align: center;
   width: 100%;
-  max-width: 320px;
+  max-width: 400px;
 }
 
 .card-box img {
@@ -71,7 +83,10 @@ button {
   border-radius: 10px;
   cursor: pointer;
   font-size: 1rem;
-  margin: 0.5rem;
+  margin: 0.5rem auto;
+  display: block;
+  width: 90%;
+  max-width: 300px;
 }
 
 button:hover {
@@ -88,7 +103,7 @@ button.danger {
   gap: 1rem;
   margin-top: 1rem;
   width: 100%;
-  max-width: 800px;
+  max-width: 960px;
 }
 
 .card {
@@ -98,6 +113,8 @@ button.danger {
   text-align: center;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 
 .card img {
@@ -109,6 +126,7 @@ button.danger {
 .card-name {
   font-weight: bold;
   padding: 0.3rem;
+  font-size: 0.9rem;
 }
 
 .card small {
@@ -123,4 +141,37 @@ button.danger {
   font-size: 1.2rem;
   cursor: pointer;
   color: var(--highlight);
+  margin-bottom: 0.5rem;
+}
+
+/* 📱 Responsivo para móviles */
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-buttons {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    padding: 0 1rem;
+  }
+
+  .card-box {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .card img {
+    height: 120px;
+  }
 }
